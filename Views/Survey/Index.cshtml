@@ -1,0 +1,19 @@
+﻿@model Question
+
+<div>
+    <div>
+        <label class="col-form-label-lg">@Model.QuestionNo</label>
+        <label class="col-form-label">@Model.Text</label>
+    </div>
+    <div>
+        @foreach (Section s in Model.Sections)
+        {
+            <partial name="_Section" model="s"/>
+        }
+
+    </div>
+    <div>
+        <button class="btn-primary">Gönder</button>
+    </div>
+</div>
+
